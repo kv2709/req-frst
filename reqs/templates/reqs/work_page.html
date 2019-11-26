@@ -1,0 +1,41 @@
+{% extends "reqs/base.html" %}
+
+
+
+
+{% block header %}
+    <h2>Создание запроса</h2>
+{% endblock header %}
+
+
+
+{% block content %}
+
+    <form action="{% url 'reqs:work_page' %}" method="post">
+        {% csrf_token %}
+        <div class="line_fields">
+            <label class="label_form">Телефон клиента</label>
+            {{ form.phone }}
+        </div>
+        <div class="line_fields">
+            <label class="label_form">Имя клиента</label>
+            {{ form.client_name }}
+        </div>
+        <div class="line_fields">
+            <label class="label_form">Модель автомобиля</label>
+            {{ form.car_model }}
+        </div>
+        <div class="line_fields">
+            <label class="label_form">VIN автомобиля</label>
+            {{ form.vin }}
+        </div>
+        <div class="line_fields">
+            <label class="label_form">Содержание заказа</label>
+            {{ form.description }}
+        </div>
+
+        <div class="line_btn">
+            <button name="submit" class="submit_btn">Отправить запрос</button>
+        </div>
+    </form>
+{% endblock content %}

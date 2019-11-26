@@ -1,0 +1,160 @@
+html, body{
+    margin: auto;
+    padding: 10px;
+    height: 100%;
+}
+
+
+body{
+    background-image: url(fone.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+li{
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+.call-cen{
+    font-family: Arial, sans-serif;
+    font-size: large;
+    color: #337AB7;
+    }
+.call-cen:hover{
+    color: navy;
+    }
+
+.container{
+
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.padding20302020 {
+    padding: 20px 30px 20px 20px;
+}
+
+.label_form{
+    display: block;
+    padding: 10px 20px 0 0;
+    float: left;
+    width: 168px;
+    word-wrap: break-word;
+    line-height: 1;
+}
+
+.line_fields{
+    padding: 5px;
+}
+.line_btn{
+
+    padding: 10px 20px 0 0;
+}
+
+.submit_btn{
+    display: block;
+    background: #337AB7 ;
+    border-radius: 5px;
+    padding: 20px 25px;
+    height: 15px;
+    line-height: 1px;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.submit_btn:hover{
+    background: navy;
+    }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 2400px) {
+.my-head{
+    display: none;
+    }
+.my-head-d{
+    display: block;
+    top: -2px;
+    }
+
+.phone-logo{
+    width: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+	top: -2px;
+    }
+
+}
+
+
+@media only screen and (max-width : 1200px) {
+.my-head{
+    display: none;
+    }
+.my-head-d{
+    display: block;
+    }
+
+.phone-logo{
+    width: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+	top: -2px;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.my-head{
+    display: none;
+    }
+.my-head-d{
+    display: block;
+    }
+
+.phone-logo{
+    width: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+	top: -2px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+.my-head{
+    display: block;
+    }
+.my-head-d{
+    display: none;
+    }
+
+.my-head .phone-logo-aline{
+    width: 25px;
+    margin-left: 35px;
+    position: relative;
+	top: -10px;
+    }
+
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+.my-head{
+    display: block;
+    }
+.my-head-d{
+    display: none;
+    }
+}

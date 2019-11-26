@@ -1,0 +1,75 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset=UTF-8">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бийский Call-Center</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
+    <link href="../../static/reqs/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Static navigation bar-->
+
+    <nav class="navbar navbar-default navbar-static-top padding20302020">
+        <div class="container">
+            <div class="navbar-header">
+                <botton type="botton" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar"
+                        area-expanded="false" area-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+         			<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+                </botton>
+
+                <a class="navbar-brand" href="{% url 'reqs:index' %}">
+                     <ul class="nav navbar-nav my-head-d">
+                        <li><img src="../../static/reqs/phone-s.png" class="phone-logo"></li>
+                        <li class="call-cen">Call-Center</li>
+                    </ul>
+                    <ul class="nav navbar-nav my-head">
+                        <li><img src="../../static/reqs/phone-s.png" class="phone-logo-aline"></li>
+                    </ul>
+                </a>
+            </div><!-- /navbar-header-->
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'reqs:about'%}">О проекте</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <li><a>Привет, {{ user.first_name }}!</a></li>
+                    <li><a href="{% url 'reqs:work_page'%}">Создание запроса</a></li>
+                    <li><a href="{% url 'users:logout' %}">Выход</a></li>
+                    {% else %}
+
+                        <li><a href="{% url 'users:login' %}">Вход</a></li>
+                    {% endif %}
+                </ul>
+            </div><!--/navbar-collapse -->
+        </div><!-- /container-->
+    </nav>
+
+
+    <div class="container">
+        <div class="page-header">
+            {% block header %}{% endblock header %}
+        </div>
+
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </div> <!-- /container-->
+
+
+</body>
+</html>
+
